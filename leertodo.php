@@ -36,7 +36,7 @@
 
 
         foreach ( $data as $current )
-            echo "<tr><td>". $current['nombre'] . "</td><td>". $current['genero'] . "</td><td>". $current['nombredirector'] . "</td><td>". $current['franquicia'] . "</td><td>". $current['pais'] . "</td><td>". $current['anoestreno'] . "</td><td>". $current['duracion'] . "</td><td>". $current['productora'] . "</td><td>". $current['actores'];
+            echo "<tr><td>". $current['nombre'] . "</td><td>". $current['genero'] . "</td><td>". $current['nombredirector'] . "</td><td>". $current['franquicia'] . "</td><td>". $current['pais'] . "</td><td>". $current['anoestreno'] . "</td><td>". $current['duracion'] . "</td><td>". $current['productora'] . "</td><td>". $current['actores']. "</td></tr>";
         ?>
         </table>
     </body>
