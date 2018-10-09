@@ -13,7 +13,7 @@
                 <th>Nombre Director</th>
                 <th>Franquicia</th>
                 <th>Pais</th>
-                <th>Fehca estreno</th>
+                <th>Fecha estreno</th>
                 <th>Duracion</th>
                 <th>Productora</th>
                 <th>Actores</th>
@@ -30,8 +30,8 @@
 
 
             foreach ( $data as $current ){
-                echo "<tr><form action=actualizar.php method=post>";
-                echo "<td><input type=text name=nombre value='" . $current['nombre'] . "'></td>";
+                echo "<tr><form action=/labmongo/actuailizarpeliculas.php method=post>";
+                echo "<td><input type=text name=nombre value='" . $current['nombre'] . "'readonly></td>";
                 echo "<td><input type=text name=genero value='" . $current['genero'] . "'></td>";
                 echo "<td><input type=text name=nombredirector value='" . $current['nombredirector'] . "'></td>";
                 echo "<td><input type=text name=franquicia value='" . $current['franquicia'] . "'></td>";
