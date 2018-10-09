@@ -20,7 +20,7 @@
                 <th>Nombre Director</th>
                 <th>Franquicia</th>
                 <th>Pais</th>
-                <th>Fehca estreno</th>
+                <th>Fecha estreno</th>
                 <th>Duracion</th>
                 <th>Productora</th>
                 <th>Actores</th>
