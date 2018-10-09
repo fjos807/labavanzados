@@ -21,4 +21,6 @@
 
         $insert = $coleccion->insertOne(['nombre' => $nombre, 'genero' => $genero, 'nombredirector' => $nomdirector, 'franquicia' => $franquicia, 'pais' => $pais, 'anoestreno'=> (int)$year, 'duracion' => (int)$duracion, 'productora' => $productora, 'actores'=> $actores]);
 
+        printf("Insertados %d documentos \n", $insert->getInsertedCount());
+
     }
