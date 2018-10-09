@@ -19,6 +19,7 @@
         <h2>Consultas especiales</h2>
 
     <!------------------------- a -------------------------------------------------->
+        <p>Consulta por titulo de la pelicula</p>
         <form action="/labmongo/buEspeciales/buscarA.php" method="post">
             <select name="peliculas">
         <?php
@@ -32,13 +33,16 @@
         $data = $coleccion->find();
 
         foreach ( $data as $current )
-            echo "<option value='" . $current['nombre'] . "'>" . $current['nombre']. "</option>";
+            echo "<option name=opcion value='" . $current['nombre'] . "'>" . $current['nombre']. "</option>";
         ?>
             </select>
             <input type="submit" value="Buscar">
         </form>
+        <br>
     <!------------------------- b -------------------------------------------------->
-        <form action="nose">
+        <p>Consulta por franquicia</p>
+
+        <form action="/labmongo/buEspeciales/buscarB.php" method="post">
             <select name="franquicias">
         <?php
 
@@ -56,8 +60,14 @@
             </select>
             <input type="submit" value="Buscar">
         </form>
+        <br>
+
     <!------------------------- c -------------------------------------------------->
-            <form action="nose">
+
+        <p>Consulta por rango de fechas</p>
+
+        <form action="/labmongo/buEspeciales/buscarC.php" method="post">
+            <a>De</a>
             <select name="aNos">
         <?php
 
@@ -66,6 +76,7 @@
         }
         ?>
             </select>
+            <a>A</a>
             <select name="aNosfin">
         <?php
 
@@ -74,11 +85,13 @@
         }
         ?>
             </select>
-
             <input type="submit" value="Buscar">
         </form>
+        <br>
+
     <!------------------------- d -------------------------------------------------->
-        <form action="nose">
+        <p>Consulta por productoras</p>
+        <form action="/labmongo/buEspeciales/buscarD.php" method="post">
             <select name="productoras">
         <?php
 
@@ -96,7 +109,7 @@
             </select>
             <input type="submit" value="Buscar">
         </form>
-
+ <!------------------------- E -------------------------------------------------->
         <?php
 
         require 'vendor/autoload.php';
@@ -106,8 +119,9 @@
         $coleccion = $base->peliculas;
 
         $data = $coleccion->count();
-
-        echo $data;
+        echo "<br>";
+        echo "Cantidad de peliculas: " . $data;
+        echo "<br>";
 
         $duraciones = $coleccion->aggregate(array(
             array(
@@ -120,17 +134,13 @@
         ));
 
         foreach ($duraciones as $dato){
-            echo $dato['_id'];
-            echo $dato['max'];
-            echo $dato['min'];
+            echo "Productora: " . $dato['_id'] . ", ";
+            echo "mayor duracion: " . $dato['max'] . ", ";
+            echo "menor duracion: " . $dato['min'];
+            echo "<br>";
         }
 
-        $rango = array('anoestreno' => array ('$lt' => 2014, '$gt' => 1999));
-        $fechas = $coleccion->find($rango);
-        foreach ($fechas as $fech){
-            echo $fech['nombre'];
 
-        }
         ?>
     </body>
 </html>
