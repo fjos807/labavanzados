@@ -19,6 +19,6 @@
         $base = $client ->labmongo;
         $coleccion = $base->peliculas;
 
-        $insert = $coleccion->insertOne(['nombre' => $nombre, 'genero' => $genero, 'nombredirector' => $nomdirector, 'franquicia' => $franquicia, 'pais' => $pais, 'anoestreno'=> $year, 'duracion' => $duracion, 'productora' => $productora, 'actores'=> $actores]);
+        $insert = $coleccion->insertOne(['nombre' => $nombre, 'genero' => $genero, 'nombredirector' => $nomdirector, 'franquicia' => $franquicia, 'pais' => $pais, 'anoestreno'=> (int)$year, 'duracion' => (int)$duracion, 'productora' => $productora, 'actores'=> $actores]);
 
     }
