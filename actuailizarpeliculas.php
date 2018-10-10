@@ -19,6 +19,6 @@
         $coleccion = $base->peliculas;
 
         $actualizar = $coleccion->updateOne(['nombre' => $nombre], ['$set' => ['genero' => $genero, 'nombredirector' => $nomdirector, 'franquicia' => $franquicia, 'pais' => $pais, 'anoestreno' => $year, 'duracion' => $duracion, 'productora' => $productora, 'actores' => $actores]]);
-        printf("Matched %d documents \n", $actualizar->getMatchedCount());
-        printf("Modified %d documents \n", $actualizar->getModifiedCount());
+        printf("%d documentos coinciden \n", $actualizar->getMatchedCount());
+        printf("Modificados %d documentos \n", $actualizar->getModifiedCount());
 

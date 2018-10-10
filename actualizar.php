@@ -9,12 +9,12 @@
         <table>
             <tr>
                 <th>Nombre</th>
-                <th>Genero</th>
+                <th>G&eacutenero</th>
                 <th>Nombre Director</th>
                 <th>Franquicia</th>
-                <th>Pais</th>
+                <th>Pa&iacutes</th>
                 <th>Fecha estreno</th>
-                <th>Duracion</th>
+                <th>Duraci&oacuten</th>
                 <th>Productora</th>
                 <th>Actores</th>
             </tr>

@@ -19,7 +19,7 @@
         <h2>Consultas especiales</h2>
 
     <!------------------------- a -------------------------------------------------->
-        <p>Consulta por titulo de la pelicula</p>
+        <p>Consulta por t&iacutetulo de la pel&iacutecula</p>
         <form action="/labmongo/buEspeciales/buscarA.php" method="post">
             <select name="peliculas">
         <?php
@@ -120,7 +120,7 @@
 
         $data = $coleccion->count();
         echo "<br>";
-        echo "Cantidad de peliculas: " . $data;
+        echo "Cantidad de pel&iacuteculas: " . $data;
         echo "<br>";
 
         $duraciones = $coleccion->aggregate(array(
@@ -135,8 +135,8 @@
 
         foreach ($duraciones as $dato){
             echo "Productora: " . $dato['_id'] . ", ";
-            echo "mayor duracion: " . $dato['max'] . ", ";
-            echo "menor duracion: " . $dato['min'];
+            echo "mayor duraci&oacuten: " . $dato['max'] . ", ";
+            echo "menor duraci&oacuten: " . $dato['min'];
             echo "<br>";
         }
 
